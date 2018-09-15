@@ -34,8 +34,6 @@ export default {
   	like(){
   		      this.post.hasBeenLiked ? this.post.likes-- : this.post.likes++;
             this.post.hasBeenLiked = !this.post.hasBeenLiked;
-
-      console.log(this.post.hasBeenLiked);
     }
 }
 };

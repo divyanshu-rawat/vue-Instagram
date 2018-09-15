@@ -18,7 +18,7 @@
             class="inputfile"
             @change="uploadImage"/>
           <label for="file">
-            <i class="far fa-plus-square fa-lg"></i>
+            <i class="fa fa-plus-square fa-lg"></i>
           </label>
 
        </div>
@@ -54,7 +54,7 @@ export default {
       if (!files.length) return;
       const reader = new FileReader();
       
-      reader.readAsDataURL(files[0]);      
+      reader.readAsDataURL(files[0]); // async reading      
       reader.onload = evt => {
         this.image = evt.target.result;
         this.step = 2;
@@ -62,8 +62,7 @@ export default {
       // To enable reuploading of same files in Chrome
       document.querySelector("#file").value = "";
     }
-  }
-  }
+  },
   components: {
     "phone-body": PhoneBody
   }
@@ -72,8 +71,3 @@ export default {
 
 <style lang="scss" src="./styles/app.scss"></style>
 
-<style type="text/css">
-  body{
-    font-family: 'Open Sans', sans-serif;
-}
-</style>
