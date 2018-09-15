@@ -24,6 +24,4 @@ export default {
 // Styles from stylesheet
 </style>
 
-<style rel="stylesheet" href="https://cssgram-cssgram.netdna-ssl.com/cssgram.min.css">
-
-</style>
+<style lang="scss"> @import '../styles/cssgram.min.css' </style>
