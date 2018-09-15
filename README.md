@@ -18,3 +18,7 @@ Access Live Application - https://vue-instagram.herokuapp.com/
 * Enable drag-scrolling through elements with the vue-dragscroll library
 
 
+![Alt Text](https://github.com/divyanshu-rawat/Vue-Instagram/blob/master/Assets/gif_one.gif)
+
+
+![Alt Text](https://github.com/divyanshu-rawat/Vue-Instagram/blob/master/Assets/gif_two.gif)
