@@ -32,8 +32,9 @@
 import PhoneBody from "./components/phone-body"
 import 'font-awesome/css/font-awesome.css'
 import 'bulma/css/bulma.css'
-import posts from "./data/posts";
-import filters from "./data/filters";
+import posts from "./data/posts"
+import filters from "./data/filters"
+import EventBus from "./event-bus.js"
 
 export default {
   name: 'app',
@@ -65,6 +66,11 @@ export default {
   },
   components: {
     "phone-body": PhoneBody
+  },
+  created(){
+    EventBus.$on("filter-selected", evt => {
+      this.selectedFilter = evt.filter;
+    });
   }
 }
 </script>

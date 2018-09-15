@@ -9,7 +9,7 @@
     </div>
 
     <div v-if="step === 2">
-      <div class="selected-image"
+      <div class="selected-image" :class="selectedFilter"
         :style="{ backgroundImage: 'url(' + image + ')' }"></div>
       
        <div class="filter-container" v-dragscroll.x>
@@ -41,7 +41,8 @@ export default {
     posts: Array,
     filters: Array ,// prop validation requirement
     step : Number,
-    image: String
+    image: String,
+    selectedFilter: String
   },
   components:{
   	"vuegram-post": VuePost,
