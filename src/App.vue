@@ -2,12 +2,35 @@
   <div id="app">
     <div class="app-phone">
       <div class="phone-header">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/vue_gram_logo_cp.png" />
+        <img src="https://banner2.kisspng.com/20180409/tiw/kisspng-computer-icons-youtube-logo-business-blog-instagram-5acbde5c6b2d38.836049801523310172439.jpg"  width="40" />
+        <!-- <i class="fab fa-instagram"></i> -->
+
+
+        <a class="cancel-cta"
+           v-if="step === 2 || step === 3" 
+           @click="goToHome">
+            Cancel
+        </a>
+
+         <a class="next-cta"
+           v-if="step === 2"
+           @click="step++">
+            Next
+        </a>
+
+        <a class="next-cta"
+           v-if="step === 3"
+           @click="sharePost">
+            Share
+        </a>
+
+
+
       </div>
-      <phone-body :posts = 'posts' :filters = 'filters' :step = 'step' :image="image" :selectedFilter="selectedFilter"
-        v-model="caption"/>
+      <phone-body :posts = 'posts' :filters = 'filters' :step = 'step' :image="image" :selectedFilter="selectedFilter " v-model="caption"
+        />
       <div class="phone-footer">
-       <div class="home-cta">
+       <div class="home-cta" @click="goToHome">
         <i class="fa fa-home fa-lg"></i>
        </div>
        <div class="upload-cta">
@@ -16,7 +39,7 @@
             name="file"
             id="file"
             class="inputfile"
-            @change="uploadImage"/>
+            @change="uploadImage" :disabled="step !== 1"/>
           <label for="file">
             <i class="fa fa-plus-square fa-lg"></i>
           </label>
@@ -62,6 +85,26 @@ export default {
       };
       // To enable reuploading of same files in Chrome
       document.querySelector("#file").value = "";
+    },
+    goToHome() {
+      this.image = "";
+      this.selectedFilter = "";
+      this.caption = "";
+      this.step = 1;
+    },
+
+     sharePost() {
+      const post = {
+        username: "Anonymous",
+        userImage:
+          "https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-9/35757804_1790304394418233_5050951174400770048_n.jpg?_nc_cat=0&oh=424d62ce184c27e0debd196d9251121b&oe=5C1A8F19",
+        postImage: this.image,
+        likes: 0,
+        caption: this.caption,
+        filter: this.selectedFilter
+      };
+      this.posts.unshift(post);
+      this.goToHome();
     }
   },
   components: {
