@@ -9,13 +9,14 @@
           <span class="username">{{post.username}}</span>
         </div>
     </div>
-    <div class="image-container"
+    <div class="image-container" 
+      @dblclick="like"
       :class="post.filter"
       :style="{ backgroundImage: 'url(' + post.postImage + ')' }">
     </div>
     <div class="content">
       <div class="heart">
-        <i class="fa fa-heart fa-lg"></i>
+        <i class="fa fa-heart fa-lg" :class="{'fa fa-heart fa-lg red': this.post.hasBeenLiked}" @click="like"></i>
       </div>
       <p class="likes">{{post.likes}} Likes</p>
       <p class="caption"><span>{{post.username}} :</span> {{post.caption}}</p>
@@ -28,7 +29,15 @@ export default {
   name: "VuePost",
   props: {
     post: Object //property validation requirement 
-  }
+  },
+  methods:{
+  	like(){
+  		      this.post.hasBeenLiked ? this.post.likes-- : this.post.likes++;
+            this.post.hasBeenLiked = !this.post.hasBeenLiked;
+
+      console.log(this.post.hasBeenLiked);
+    }
+}
 };
 </script>
 
