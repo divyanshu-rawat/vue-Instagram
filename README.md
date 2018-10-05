@@ -13,11 +13,29 @@ Access Live Application - https://vue-instagram.herokuapp.com/
 
 ## Instructions To Run:
 
+### Traditional way:
+
 ``` npm install ```
 
 ``` cd src ```
 
 ``` vue serve ```
+
+### Docker way:
+
+```bash
+$ docker build -t vue-instagram:local .
+$ docker run -d -p 8888:80 --name vue-instagram vue-instagram:local
+```
+
+Then the app is exposed on your host using port `8888`.
+
+To tear down the app:
+
+```
+$ docker stop vue-instagram
+$ docker rm vue-instagram
+```
 
 ## Application Features:
 * Uploading files with the FileReader API
