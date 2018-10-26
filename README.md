@@ -2,9 +2,6 @@
 ## Vue-Instagram (WIP!!)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
 
 An application having some features similar to that of Instagram built on top of Vue.js
@@ -28,6 +25,8 @@ $ docker build -t vue-instagram:local .
 $ docker run -d -p 8888:80 --name vue-instagram vue-instagram:local
 ```
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
+
 Then the app is exposed on your host using port `8888`.
 
 To tear down the app:
@@ -37,10 +36,14 @@ $ docker stop vue-instagram
 $ docker rm vue-instagram
 ```
 
+[![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)](https://forthebadge.com)
+
 ## Application Features:
 * Uploading files with the FileReader API
 * Editing images with Instagram-like filters using the CSSGram library
 * Enable drag-scrolling through elements with the vue-dragscroll library
+
+[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
 
 
 ![Alt Text](https://github.com/divyanshu-rawat/Vue-Instagram/blob/master/Assets/gif_one.gif)
