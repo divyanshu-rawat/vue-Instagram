@@ -22,13 +22,13 @@ export default {
   },
 
   methods:{
-  	selectFilter(){
+    selectFilter(){
 
-  	EventBus.$emit(
+    EventBus.$emit(
        "filter-selected", { filter: this.filter.name }
       );
 
-  	}
+    }
   }
 };
 </script>

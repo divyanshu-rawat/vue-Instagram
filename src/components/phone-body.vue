@@ -59,7 +59,7 @@ export default {
     caption:String
   },
   components:{
-  	"vuegram-post": VuePost,
+    "vuegram-post": VuePost,
     "filter-type": FilterType
   }
 };

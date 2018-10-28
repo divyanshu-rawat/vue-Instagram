@@ -31,8 +31,8 @@ export default {
     post: Object //property validation requirement 
   },
   methods:{
-  	like(){
-  		      this.post.hasBeenLiked ? this.post.likes-- : this.post.likes++;
+    like(){
+            this.post.hasBeenLiked ? this.post.likes-- : this.post.likes++;
             this.post.hasBeenLiked = !this.post.hasBeenLiked;
     }
 }
