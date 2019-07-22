@@ -1,6 +1,12 @@
 
 ## Vue-Instagram (WIP!!)
 
+![Alt Text](https://github.com/divyanshu-rawat/Vue-Instagram/blob/master/Assets/gif_one.gif)
+
+
+![Alt Text](https://github.com/divyanshu-rawat/Vue-Instagram/blob/master/Assets/gif_two.gif)
+
+
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
 
@@ -45,8 +51,3 @@ $ docker rm vue-instagram
 
 [![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
 
-
-![Alt Text](https://github.com/divyanshu-rawat/Vue-Instagram/blob/master/Assets/gif_one.gif)
-
-
-![Alt Text](https://github.com/divyanshu-rawat/Vue-Instagram/blob/master/Assets/gif_two.gif)
