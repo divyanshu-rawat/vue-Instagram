@@ -11,7 +11,7 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "bulma": "^0.7.1",
     "font-awesome": "^4.7.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "vue": "^2.5.17",
     "vue-dragscroll": "^1.5.0"
   },
